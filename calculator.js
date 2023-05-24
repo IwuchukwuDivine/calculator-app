@@ -8,3 +8,10 @@ document.querySelector('.delete').addEventListener('click', () => {
 document.querySelector('.equal').addEventListener('click', () => {
   display.value = eval(display.value);
 });
+
+document.querySelectorAll('.btns').forEach((button) => {
+  button.addEventListener('click', (a) => {
+    let number = a.target.dataset.value;
+    display.value += number;
+  });
+});
